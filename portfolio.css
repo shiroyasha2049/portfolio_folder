@@ -1,0 +1,86 @@
+body { background-color: #59EF0A; margin-top: 50px; width: 100%; max-width: 100%;overflow-x: hidden;}
+@font-face { font-family: Roboto; src: url('Roboto-Bold.ttf'); font-weight: bold; }
+@font-face { font-family: Compacta; src: url('/unicode.compacta.ttf'); } 
+.bento-box { display: grid;grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+gap: 15px;}
+.box { border-radius: 10px; padding: 20px; border: 3px solid black; background-color: #59EF0A; }
+.full-width { grid-column: span 3; }
+.black-box { width: 100%; height: 250px; background-image: url("/images/portfolioimg5.png"); background-position: center; background-size: 500px 160px; background-repeat: no-repeat; border-radius: 10px; background-attachment: fixed; }
+.headings { font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; font-size: 60px; }
+
+/* Scrolling text bar */
+.scrolling-container {
+    width: 100%;
+    overflow: hidden;
+    background: black;
+    color: #FFFF33;
+    padding: 5px 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    white-space: nowrap;
+    display: flex;
+    }
+.scrolling-text {
+    display: flex;
+    white-space: nowrap;
+    animation: scrollText 12s linear infinite;
+}
+.scrolling-text span {
+    padding-right: 50px; /* Space between repeated text */
+}
+@keyframes scrollText {
+    from { transform: translateX(0%); }
+    to { transform: translateX(-50%); }
+}
+.scrolling-text a { color: #59EF0A; }
+
+/* Sticky top bar */
+.sticky-div {
+    background-color: #333333;
+    color: #59EF0A;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 10px 0;
+    font-family: Roboto;
+    text-align: center;
+    z-index: 1000;
+}
+
+/* Skills box spans 2 columns */
+.skills-box {
+    grid-column: span 2;
+}
+
+/* Contact box aligns under Project 3 */
+.contact-box {
+    grid-column: span 1;
+}
+
+p{font-family:Roboto;}
+
+.tag-container{display: flex;
+gap:8px;
+margin-top:10px; flex-wrap: wrap;}
+
+.tag{background-color: black;  color: #FFFF33;
+padding: 5px 10px;
+border-radius: 15px;
+font-size: 14px;
+font-family: Roboto, sans-serif;
+text-align: center;
+white-space: nowrap;}
+
+h4{font-family: Roboto;background-color: #FFFF33; display: inline-block;}
+h2{font-family: Roboto;}
+
+
+.project{display: flex;
+flex-direction: column;
+align-items: center;
+text-align: left;}
+
+.projectimage{max-width: 100%; /* Ensures responsiveness */
+height: auto;}
