@@ -154,3 +154,6 @@ height: auto;}
 .resume-left, .resume-right {
     min-height: 100%;
 }
+
+.cv{color: black; background-color: aliceblue;}
+.cv a {text-decoration: none;}
