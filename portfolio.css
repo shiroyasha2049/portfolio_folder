@@ -36,7 +36,7 @@ gap: 15px;}
 
 @keyframes scrollText {
     from { transform: translateX(0%); } /*"hiccups" might be happening cuz of position+timing ka kuch. mess around w those settings*/
-    to { transform: translateX(-50%); }
+    to { transform: translateX(-30%); }
 }
 
 @keyframes scrollText1 {
@@ -77,9 +77,20 @@ gap: 15px;}
 
 p{font-family:Roboto;}
 
-.tag-container{display: flex;
-gap:8px;
-margin-top:10px; flex-wrap: wrap;}
+.tag-container {
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+    align-self: flex-end; /* Ensures it sticks to the bottom within a flex parent */
+}
+
+.parent-container { 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Pushes the tags to the bottom */
+    height: 100%; /* Ensures it takes the full height of its parent */
+}
 
 .tag{background-color: black;  color: #FFFF33;
 padding: 5px 10px;
@@ -100,6 +111,10 @@ text-align: left;}
 
 .projectimage{max-width: 100%; /* Ensures responsiveness */
 height: auto;}
+
+.projectimage-3{max-width: 100%; /* Ensures responsiveness */
+    height: auto;
+        border: 2px solid #555;}
 
 
 .resume-container {
