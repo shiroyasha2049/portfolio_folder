@@ -1,4 +1,4 @@
-body { background-color: #59EF0A; margin-top: 50px; width: 100%; max-width: 100%;overflow-x: hidden;margin-bottom: 50px;}
+body { background-color: #FFFF33; margin-top: 50px; width: 100%; max-width: 100%;overflow-x: hidden;margin-bottom: 50px; transition: background-color 1s ease-in-out;}
 
 @font-face { font-family: Roboto; src: url('Roboto-Bold.ttf'); font-weight: bold; }
 @font-face { font-family: Compacta; src: url('/unicode.compacta.ttf'); } 
@@ -172,3 +172,59 @@ height: auto;}
 
 .cv{color: black; background-color: aliceblue;}
 .cv a {text-decoration: none;}
+
+.box.project {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.project-description {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.box.project:hover .project-description {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.box.project:hover .projectimage,
+.box.project:hover h4,
+.box.project:hover .tag-container {
+    opacity: 0;
+}
+
+.video-button {
+    background-color: black;
+    color: #FFFF33;
+    border: none;
+    padding: 8px 12px;
+    font-size: 14px;
+    font-family: Roboto, sans-serif;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+.video-button:hover {
+    background-color: #333333;
+}
